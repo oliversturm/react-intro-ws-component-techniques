@@ -1,2 +1,2 @@
-# react-intro-ws-component-techniques
+# research-react-intro-module2
 Created with CodeSandbox
