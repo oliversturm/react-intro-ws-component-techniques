@@ -16,4 +16,5 @@ const SearchIcon = () => (
   </svg>
 );
 
-export default memo(SearchIcon);
+const SearchIconMemo = memo(SearchIcon);
+export default SearchIconMemo;

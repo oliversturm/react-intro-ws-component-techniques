@@ -13,7 +13,7 @@ const SearchField = ({ onSearch, onChange }) => {
     (e) => {
       if (e.key === 'Enter') search();
     },
-    [search],
+    [search]
   );
 
   const textChanged = useCallback(
@@ -21,7 +21,7 @@ const SearchField = ({ onSearch, onChange }) => {
       setText(e.target.value);
       if (onChange) onChange(e.target.value);
     },
-    [onChange],
+    [onChange]
   );
 
   return (
@@ -33,7 +33,7 @@ const SearchField = ({ onSearch, onChange }) => {
         className={styles.input}
         type="text"
         placeholder="Search for something..."
-        text={text}
+        value={text}
         onChange={textChanged}
         onKeyPress={inputKeypress}
       />
@@ -44,4 +44,5 @@ const SearchField = ({ onSearch, onChange }) => {
   );
 };
 
-export default memo(SearchField);
+const SearchFieldMemo = memo(SearchField);
+export default SearchFieldMemo;

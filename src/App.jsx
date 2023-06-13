@@ -4,7 +4,7 @@ import styles from './App.module.css';
 import SearchField from './SearchField';
 import Tippy from './Tippy';
 
-export default memo(function App() {
+function App() {
   const [button1Clicks, setButton1Clicks] = useState(0);
   const button1Click = useCallback(() => {
     setButton1Clicks((c) => c + 1);
@@ -30,7 +30,7 @@ export default memo(function App() {
     (e) => {
       setTooltipPlacement(e.target.value);
     },
-    [setTooltipPlacement],
+    [setTooltipPlacement]
   );
 
   return (
@@ -53,7 +53,7 @@ export default memo(function App() {
               setButton1Type('important');
             }}
           >
-            Change Button 1 type to 'important'
+            Change Button 1 type to &apos;important&apos;
           </Button>
 
           <Button type={{ backgroundColor: 'green' }} />
@@ -103,4 +103,7 @@ export default memo(function App() {
       </div>
     </main>
   );
-});
+}
+
+const AppMemo = memo(App);
+export default AppMemo;

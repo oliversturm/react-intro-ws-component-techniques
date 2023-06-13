@@ -44,4 +44,5 @@ const Tippy = ({
   return <div ref={nodeRef}>{children}</div>;
 };
 
-export default memo(Tippy);
+const TippyMemo = memo(Tippy);
+export default TippyMemo;

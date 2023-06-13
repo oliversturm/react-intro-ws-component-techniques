@@ -15,4 +15,5 @@ const Button = ({ children, type = 'default', onClick }) => {
   );
 };
 
-export default memo(Button);
+const ButtonMemo = memo(Button);
+export default ButtonMemo;
